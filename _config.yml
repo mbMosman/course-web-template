@@ -11,8 +11,8 @@
 ###############################################################################
 
 # Site settings - affect how your site is published
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "mbmosman.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "mbmosman.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Color scheme based on http://flatuicolors.com/.
 # Possible values:
