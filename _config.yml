@@ -19,7 +19,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #    - silver          - gold            - midnight
 #    - green           - turquoise       - blue
 #    - purple          - orange          - red
-theme_color: green
+theme_color: silver
 
 ###############################################################################
 
@@ -41,17 +41,17 @@ exclude:
 ####################
 collections:
   modules:
-    layout: module
+    layout: module_content
     output: true
   outcomes:
-    layout: outcome
+    layout: module_content
     output: true
   readings:
-    layout: reading
+    layout: module_content
     output: true
   experiences:
-    layout: experience
+    layout: module_content
     output: true
   assessments:
-    layout: assessment
+    layout: module_content
     output: true

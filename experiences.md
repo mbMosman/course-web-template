@@ -1,5 +1,5 @@
 ---
-layout: default_page
+layout: page
 ---
 
 <header><h1>Learning Experiences</h1></header>

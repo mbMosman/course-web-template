@@ -1,5 +1,5 @@
 ---
-layout: default_page
+layout: page
 ---
 
 <header><h1>Learning Outcomes</h1></header>
@@ -7,16 +7,34 @@ layout: default_page
 <main class="container">
 
 {% assign outcomes = site.outcomes | sort: 'sort-order' %}
-{% for outcome in outcomes %}
-<div class="outcome {% cycle 'section-bg1', 'section-bg2' %}">
+{% assign course_outcomes = site.data.course_outcomes | sort: 'sort-order' %}
 
-  <h2>{{ outcome.title }}</h2>
-  <p>{{ outcome.content | markdownify }}</p>
+{% for course_outcome in course_outcomes %}
+<div class="panel panel-default">
 
+  <div class="panel-heading">
+    <h2 class="panel-title">{{ course_outcome.text }}</h2>
+  </div>
+  <ul class="list-group">
+
+  {% assign match_found = false %}
+  {% for outcome in outcomes %}
+    {% if  outcome.course_outcome == course_outcome.id %}
+      {% assign match_found = true %}
+      <li class="list-group-item"><a class="block-link" href="outcomes/{{ outcome.name }}"><div class="outcome">
+      <h3 class="panel-title">{{ outcome.title }}</h3>
+      {{ outcome.content | markdownify }}
+      </div></a></li>
+    {% endif %}
+  {% endfor %}
+  {% if match_found == false %}
+    <li class="list-group-item">No supporting module outcomes found.</li>
+  {% endif %}
+  </ul>
 </div>
 {% else %}
 
-  <p>No outcomes for this course.</p>
+  <p>No course outcomes configured for this course.</p>
 
 {% endfor %}
 
