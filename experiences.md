@@ -6,14 +6,10 @@ layout: default
 
 <main class="container">
 
-{% assign experiences = site.experiences | sort: 'sort-order' %}
-{% for experience in experiences %}
-<div class="experience {% cycle 'section-bg1', 'section-bg2' %}">
+{% assign experiences = site.experiences %}
+{% for ex in experiences %}
+  {% include experience_panel.html experience=ex %}
 
-  <h2>{{ experience.title }}</h2>
-  <p>{{ experience.summary }}</p>
-
-</div>
 {% else %}
 
   <p>No experiences for this course.</p>

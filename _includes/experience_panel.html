@@ -1,0 +1,31 @@
+{% assign experience = include.experience %}
+
+{% if experience == nil %}
+{% for item in site.experiences %}
+  {% assign item_name = item.path | split:"/" | last | split:"." | first %}
+  {% if include.name == item_name %}
+    {% assign experience = item %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% endif %}
+
+{% if experience %}
+<a class="block-link" href="{{ experience.url | prepend: site.baseurl }}">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">{{experience.title }}</h2>
+    </div>
+    <div class="panel-body">
+    {{ experience.summary }}
+    </div>
+  </div>
+</a>
+{% else %}
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2 class="panel-title">Error</h2>
+  </div>
+  <div class="panel-body">Experience with the file name: {{ include.name }}, was not found.</div>
+</div>
+{% endif %}
