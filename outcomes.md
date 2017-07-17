@@ -21,10 +21,14 @@ layout: page
   {% for outcome in outcomes %}
     {% if  outcome.course_outcome == course_outcome.id %}
       {% assign match_found = true %}
-      <li class="list-group-item"><a class="block-link" href="{{ outcome.url }}"><div class="outcome">
-      <h3 class="panel-title">{{ outcome.title }}</h3>
-      {{ outcome.content | markdownify }}
-      </div></a></li>
+      <li class="list-group-item">
+        <a class="block-link" href="{{ outcome.url | prepend: site.baseurl | prepend: site.url }}">
+          <div class="outcome">
+            <h3 class="panel-title">{{ outcome.title }}</h3>
+            {{ outcome.content | markdownify }}
+          </div>
+        </a>
+      </li>
     {% endif %}
   {% endfor %}
   {% if match_found == false %}

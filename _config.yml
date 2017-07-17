@@ -63,7 +63,7 @@ defaults:
       path: ""
       type: "outcomes"
     values:
-      layout: module_content
+      layout: outcome
   -
     scope:
       path: ""
