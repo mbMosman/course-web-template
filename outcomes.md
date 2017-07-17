@@ -6,7 +6,7 @@ layout: page
 
 <main class="container">
 
-{% assign outcomes = site.outcomes | sort: 'sort-order' %}
+{% assign outcomes = site.outcomes %}
 {% assign course_outcomes = site.data.course_outcomes | sort: 'sort-order' %}
 
 {% for course_outcome in course_outcomes %}

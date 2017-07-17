@@ -1,0 +1,29 @@
+{% assign outcome = nil %}
+
+{% for item in site.outcomes %}
+  {% assign item_name = item.path | split:"/" | last | split:"." | first %}
+  {% if include.name == item_name %}
+    {% assign outcome = item %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if outcome %}
+<a class="block-link" href="{{ outcome.url | prepend: site.baseurl }}">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">{{outcome.title }}</h2>
+    </div>
+    <div class="panel-body">
+    {{ outcome.content | markdownify }}
+    </div>
+  </div>
+</a>
+{% else %}
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2 class="panel-title">Error</h2>
+  </div>
+  <div class="panel-body">Outcome with the file name: {{ include.name }}, was not found.</div>
+</div>
+{% endif %}
