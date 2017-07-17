@@ -25,6 +25,6 @@ title: Home
 {% assign count_student_instructors = site.data.student_instructors.size %}
 {% if count_student_instructors > 0 %}
 
-### Assistant{% if count_student_instructors > 1 %}s{% endif %}
+### Assistant Instructor{% if count_student_instructors > 1 %}s{% endif %}
 {% include student_instructor_list.html %}
 {% endif %}
