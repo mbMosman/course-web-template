@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default_page
 ---
 
 <header><h1>Learning Outcomes</h1></header>
