@@ -1,0 +1,15 @@
+---
+layout: module_content
+---
+
+<h2>{{ page.title }}</h2>
+
+{% if page.outcomes.size > 0 %}
+<h3>Outcomes</h3>
+<div class="row">
+{% for outcome_name in page.outcomes %}
+  <div class="col-xs-12 col-md-6">
+    {% include outcome_panel.html name=outcome_name %}
+  </div>
+{% endfor %}
+{% endif %}

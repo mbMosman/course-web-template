@@ -57,7 +57,7 @@ defaults:
       path: ""
       type: "modules"
     values:
-      layout: module_content
+      layout: module
   -
     scope:
       path: ""
@@ -69,13 +69,13 @@ defaults:
       path: ""
       type: "readings"
     values:
-      layout: module_content
+      layout: reading
   -
     scope:
       path: ""
       type: "experiences"
     values:
-      layout: module_content
+      layout: experience
   -
     scope:
       path: ""
