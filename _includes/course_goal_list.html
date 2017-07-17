@@ -1,0 +1,14 @@
+The following goals will be addressed in this course:
+
+{% assign outcomes = site.data.course_outcomes | sort: 'sort-order' %}
+{% for outcome in outcomes %}
+  {% if forloop.first %}<ul>{% endif %}
+  <li>{{ outcome.text }}</li>
+  {% if forloop.last %}</ul>{% endif %}
+{% else %}
+  <p>No outcomes for this course.</p>
+  <script>
+    console.log("No course outcomes have been defined.");
+    console.log("Course outcomes should be defined in the _data/course_outcomes.yml file.");
+  </script>
+{% endfor %}

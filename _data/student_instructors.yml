@@ -1,0 +1,43 @@
+-
+  sort-order: 2
+  name: Student Instructor 1
+#  img_url: "https://avatars3.githubusercontent.com/u/5143491"
+  notes: TA - section 1
+  email: student-instructor1@univeristy.edu
+#  email_notes: Please make sure to include your course number & section in the subject.
+  phone: 123-456-7788
+  phone_notes: Please do not call between 10pm and 9am.
+#  office_location: Bldg 4, room 432
+#  office_hours:
+#    - Mon 1-3PM
+#    - Wed 3-5PM
+#  office_hours_notes: Office hours are open door time.  No appointment needed.
+  description: >
+    Some optional description about who this person is and their role in the course.
+-
+  sort-order: 3
+  name: Student Instructor 2
+  img_url: "https://avatars3.githubusercontent.com/u/16691467"
+  notes: TA - section 2
+  email: student-instructor2@univeristy.edu
+#  email_notes: Please make sure to include your course number & section in the subject.
+  phone: 123-456-7788
+  phone_notes: Please do not call between 10pm and 9am.
+  office_location: Bldg 1, room 123
+  office_hours:
+    - Tues 1-3PM
+  office_hours_notes: Weekly tutor session.  Open to all program students.
+#  description: >
+#    Some optional description about who this instructor is or their role in the course.
+-
+  sort-order: 1
+  name: Student Instructor 3
+#  img_url: "https://avatars3.githubusercontent.com/u/5143491"
+  email: student-instructor3@univeristy.edu
+#  email_notes: Please make sure to include your course number & section in the subject.
+  office_location: Bldg 1, room 123
+  office_hours:
+    - Thurs 1-3PM
+  office_hours_notes: Weekly tutor session.  Open to all program students.
+#  description: >
+#    Some optional description about who this instructor is or their role in the course.

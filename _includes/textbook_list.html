@@ -1,0 +1,28 @@
+{% for textbook in site.data.textbooks %}
+
+  <div class="textbook panel panel-default">
+    <div class="panel-heading">
+      <span class="textbook-title">{{ textbook.title }}</span>
+      {%if textbook.edition %}<span class="textbook-edition">{{ textbook.edition }} edition</span>{% endif %}
+      {%if textbook.required %}<span class="badge">Required</span>{% endif %}
+    </div>
+    <div class="panel-body">
+      {% for author in textbook.authors %}
+        {% if forloop.first %}by: {% endif %}
+        {{ author }}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+      {%if textbook.isbn %}<br>ISBN: {{ textbook.isbn }}{% endif %}
+      {%if textbook.description %}<br>{{ textbook.description }}{% endif %}
+      {%if textbook.note %}<br>{{ textbook.note }}{% endif %}
+    </div>
+  </div>
+
+{% else %}
+
+  <p>There are no textbooks for this course.</p>
+  <script>
+    console.log("No textbooks have been defined.");
+    console.log("Course textbooks should be defined in the _data/textbooks.yml file.");
+  </script>
+
+{% endfor %}

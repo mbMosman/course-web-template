@@ -1,0 +1,30 @@
+-
+  sort-order: 1
+  name: Instructor Name 1
+  img_url: "https://avatars3.githubusercontent.com/u/5143491"
+  email: instructor1@univeristy.edu
+  email_note: Please make sure to include your course number & section in the subject.
+  phone: 123-456-7788
+  phone_note: Please leave a message or send email if unavailable.
+  office_location: Bldg 4, room 432
+  office_hours:
+    - Mon 1-3PM
+    - Wed 3-5PM
+  office_hours_note: Office hours are open door time.  No appointment needed.
+#  description: >
+#    Some optional description about who this instructor is or their role in the course.
+-
+  sort-order: 2
+#  img_url: "https://avatars3.githubusercontent.com/u/5143491"
+  name: Instructor Name 2
+  email: instructor2@univeristy.edu
+#  email_note: Please make sure to include your course number & section in the subject.
+#  phone: 123-456-7788
+#  phone_note: Please leave a message or send email if unavailable.
+  office_location: Bldg 4, room 430
+  office_hours:
+    - Tues 1-3PM
+    - Thurs 3-5PM
+#  office_hours_note: Office hours are open door time.  No appointment needed.
+  description: >
+    Some optional description about who this instructor is or their role in the course.

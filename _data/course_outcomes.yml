@@ -1,0 +1,16 @@
+-
+  sort-order: 1
+  id: outcome-1
+  text: "Course outcome 1."
+-
+  sort-order: 2
+  id: outcome-2
+  text: "Course outcome 2."
+-
+  sort-order: 3
+  id: outcome-3
+  text: "Course outcome 3."
+-
+  sort-order: 4
+  id: outcome-4
+  text: "Course outcome 4."

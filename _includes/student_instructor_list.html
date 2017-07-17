@@ -1,0 +1,36 @@
+{% for instructor in site.data.student_instructors %}
+<div class="panel panel-default">
+  <div class="panel-heading">{{ instructor.name }}</div>
+  <div class="panel-body">
+  <div class="col-xs-5 col-sm-4 col-md-2">
+    {% if instructor.img_url %}
+    <img src="{{ instructor.img_url }}" class="img-responsive"
+         alt="Picture of {{ instructor.name }}.">
+    {% else %}
+    <div class="missing-portrait well"><i class="fa fa-user fa-5x" aria-hidden="true"></i></div>
+    {% endif %}
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-10 col-lg-5">
+    <p><b>Contact Information</b></p>
+    <p><a href="mailto:{{ instructor.email }}">{{ instructor.email }}</a>
+       {% if instructor.email_note %}<br>{{ instructor.email_note }}{% endif %}
+       {% if instructor.phone %}<br>{{ instructor.phone }}{% endif %}
+       {% if instructor.phone_note %}<br>{{ instructor.phone_note }}{% endif %}
+       {% if instructor.office_location %}<br>{{ instructor.office_location }}{% endif %}
+    </p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-10 col-lg-5 col-md-offset-2 col-lg-offset-0">
+    {% if instructor.office_hours %}
+    <p><b>Office Hours</b></p>
+    <ul>{% for time in instructor.office_hours %}
+        <li>{{time}}</li>
+    {% endfor %}</ul>
+    {% if instructor.office_hours_note %}<p>{{ instructor.office_hours_note }}</p>{% endif %}
+    {% endif %}
+    </div>
+    <div class="col-xs-12 col-lg-6">
+    {% if instructor.description %}<p>{{ instructor.instructor.description | markdownify }}</p>{% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,57 @@
+###############################################################################
+#
+# Welcome!
+#
+# Update the settings below and in the following _data files:
+# _data/course_outcomes.yml
+# _data/textbooks.yml
+# _data/instructors.yml
+# _data/student_instructors.yml
+#
+###############################################################################
+
+# Site settings - affect how your site is published
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Color scheme based on http://flatuicolors.com/.
+# Possible values:
+#    - silver          - gold            - midnight
+#    - green           - turquoise       - blue
+#    - purple          - orange          - red
+theme_color: turquoise
+
+###############################################################################
+
+###############################################################################
+# The information below should not need to be modified.
+###############################################################################
+
+# Build settings
+####################
+markdown: kramdown
+highlighter: rouge
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Collections - settings for the _collection folder content
+####################
+collections:
+  modules:
+    layout: module
+    output: true
+  outcomes:
+    layout: outcome
+    output: true
+  readings:
+    layout: reading
+    output: true
+  experiences:
+    layout: experience
+    output: true
+  assessments:
+    layout: assessment
+    output: true

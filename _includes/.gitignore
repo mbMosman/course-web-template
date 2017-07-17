@@ -1,0 +1,20 @@
+# Do not commit _site directory
+##################################
+_site
+src/_site
+
+# IntelliJ files
+##################################
+.idea
+core.iml
+
+
+# OS Files
+##################################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

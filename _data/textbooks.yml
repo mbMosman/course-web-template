@@ -1,0 +1,30 @@
+-
+  sort-order: 1
+  title: Book Title 1
+  edition: 4th
+  authors:
+    - author1
+    - author2
+  isbn: 11111-22222
+  required: true
+  description: "The is the main textbook for the course."
+  note: "OK to rent, online access code is not required for this course."
+-
+  sort-order: 2
+  title: Book Title 2
+  edition: 3rd
+  authors:
+    - author1
+  isbn: 33333-44444
+#  required: true
+  description: "The is a supplementary textbook for the course."
+  note: "It is ok to use an older edition  for this book."
+-
+  sort-order: 3
+  title: Book Title 3
+  #edition: 1
+  authors:
+    - author1
+  isbn: 55555-66666
+  #  required: true
+  description: "The is another supplementary textbook for the course."
