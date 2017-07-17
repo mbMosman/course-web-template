@@ -26,6 +26,6 @@
   <div class="panel-heading">
     <h2 class="panel-title">Error</h2>
   </div>
-  <div class="panel-body">Experience with the file name: {{ include.name }}, was not found.</div>
+  <div class="panel-body">Experience {% if include.name %}with the file name: {{ include.name }},{% endif %}  was not found.</div>
 </div>
 {% endif %}
