@@ -21,7 +21,7 @@ layout: page
   {% for outcome in outcomes %}
     {% if  outcome.course_outcome == course_outcome.id %}
       {% assign match_found = true %}
-      <li class="list-group-item"><a class="block-link" href="outcomes/{{ outcome.name }}"><div class="outcome">
+      <li class="list-group-item"><a class="block-link" href="{{ outcome.url }}"><div class="outcome">
       <h3 class="panel-title">{{ outcome.title }}</h3>
       {{ outcome.content | markdownify }}
       </div></a></li>

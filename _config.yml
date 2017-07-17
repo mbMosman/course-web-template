@@ -37,21 +37,48 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# Collections - settings for the _collection folder content
+# Collections - settings to publish the _collection folder content
 ####################
 collections:
   modules:
-    layout: module_content
     output: true
   outcomes:
-    layout: module_content
     output: true
   readings:
-    layout: module_content
     output: true
   experiences:
-    layout: module_content
     output: true
   assessments:
-    layout: module_content
     output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "modules"
+    values:
+      layout: module_content
+  -
+    scope:
+      path: ""
+      type: "outcomes"
+    values:
+      layout: module_content
+  -
+    scope:
+      path: ""
+      type: "readings"
+    values:
+      layout: module_content
+  -
+    scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: module_content
+  -
+    scope:
+      path: ""
+      type: "assessments"
+    values:
+      layout: module_content
