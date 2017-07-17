@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<header><h1>Modules <small>Topics covered in this class.</small></h1></header>
+
+<main class="container">
+
+{% assign modules = site.modules | sort: 'sort-order' %}
+
+{% for module in modules %}
+<div class="col-sm-4">
+  <a class="block-link" href="{{ module.url | prepend: site.baseurl }}">
+    <div class="panel panel-default">
+
+      <div class="panel-heading">
+        <h2 class="panel-title"><i class="fa fa-university" aria-hidden="true"></i> {{ module.title }}</h2>
+      </div>
+
+      <div class="panel-body">
+        {{ module.summary }}
+      </div>
+      <div class="panel-footer">
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        {% for tag in module.tags %}<span class="tag badge">{{ tag }}</span>{% endfor %}
+      </div>
+    </div>
+  </a>
+</div>
+{% else %}
+
+  <p>No modules configured for this course.</p>
+
+{% endfor %}

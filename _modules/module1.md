@@ -1,7 +1,11 @@
 ---
 title: Module 1
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium lectus tortor, sit amet feugiat orci tincidunt sed. Sed posuere elit at libero consectetur congue.
 outcomes:
  - outcome1
  - outcome2
-
+tags:
+ - tag1
+ - tag2
+ - tag3
 ---
