@@ -1,6 +1,6 @@
 ---
 title: Second Experience
-summary: "Another short sentence or two that describes the purpose of this other experience."
+summary: "Another somewhat longer sentence or two that describes the purpose of this other more interesting experience."
 ---
 
 # {{ page.title }}

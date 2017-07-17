@@ -11,6 +11,8 @@ layout: page
   <div class="col-xs-12 col-md-6">
     {% include outcome_panel.html name=outcome_name %}
   </div>
+  {% capture mod %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
+  {% if mod == '1' %}<div class="clearfix visible-md-block visible-lg-block"></div>{% endif %}
 {% endfor %}
 </div>
 {% endif %}
@@ -19,9 +21,13 @@ layout: page
 <h3>Readings</h3>
 <div class="row">
 {% for reading_name in page.readings %}
-  <div class="col-xs-6 col-md-4 col-lg-3">
+  <div class="col-sm-4 col-lg-3">
     {% include reading_panel.html name=reading_name %}
   </div>
+  {% capture mod_sm %}{{ forloop.index0 | modulo:3 }}{% endcapture %}
+  {% capture mod_md %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
+  {% if mod_sm == '2' %}<div class="clearfix visible-sm-block visible-md-block"></div>{% endif %}
+  {% if mod_md == '3' %}<div class="clearfix visible-md-block"></div>{% endif %}
 {% endfor %}
 </div>
 {% endif %}
@@ -30,9 +36,13 @@ layout: page
 <h3>Experiences</h3>
 <div class="row">
 {% for exp_name in page.experiences %}
-  <div class="col-xs-6 col-md-4 col-lg-3">
+  <div class="col-sm-4 col-lg-3">
     {% include experience_panel.html name=exp_name %}
   </div>
+  {% capture mod_sm %}{{ forloop.index0 | modulo:3 }}{% endcapture %}{{mod_3}}
+  {% capture mod_lg %}{{ forloop.index0 | modulo:4 }}{% endcapture %}{{mod_4}}
+  {% if mod_sm == '2' %}<div class="clearfix visible-sm-block visible-md-block"></div>{% endif %}
+  {% if mod_lg == '3' %}<div class="clearfix visible-lg-block"></div>{% endif %}
 {% endfor %}
 </div>
 {% endif %}
