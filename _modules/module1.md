@@ -4,6 +4,15 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretiu
 outcomes:
  - outcome1
  - outcome2
+readings:
+- reading1
+- reading2
+- reading3
+experiences:
+ - experience1
+ - experience2
+ - experience3
+ - experience4
 tags:
  - tag1
  - tag2

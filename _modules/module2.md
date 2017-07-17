@@ -4,5 +4,11 @@ summary: Nunc sit amet metus non nisl faucibus ultrices. Proin laoreet non nibh 
 outcomes:
  - outcome1
  - outcome2
-
+readings:
+- reading1
+- reading2
+experiences:
+ - experience1
+ - experience2
+ - experience3
 ---

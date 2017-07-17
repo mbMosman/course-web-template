@@ -1,0 +1,31 @@
+{% assign reading = include.reading %}
+
+{% if reading == nil %}
+{% for item in site.readings %}
+  {% assign item_name = item.path | split:"/" | last | split:"." | first %}
+  {% if include.name == item_name %}
+    {% assign reading = item %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% endif %}
+
+{% if reading %}
+<a class="block-link" href="{{ reading.url | prepend: site.baseurl }}">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">{{reading.title }}</h2>
+    </div>
+    <div class="panel-body">
+    {{ reading.summary }}
+    </div>
+  </div>
+</a>
+{% else %}
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2 class="panel-title">Error</h2>
+  </div>
+  <div class="panel-body">Reading {% if include.name %}with the file name: {{ include.name }},{% endif %}  was not found.</div>
+</div>
+{% endif %}

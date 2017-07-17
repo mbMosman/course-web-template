@@ -12,6 +12,18 @@ layout: page
     {% include outcome_panel.html name=outcome_name %}
   </div>
 {% endfor %}
+</div>
+{% endif %}
+
+{% if page.readings.size > 0 %}
+<h3>Readings</h3>
+<div class="row">
+{% for reading_name in page.readings %}
+  <div class="col-xs-6 col-md-4 col-lg-3">
+    {% include reading_panel.html name=reading_name %}
+  </div>
+{% endfor %}
+</div>
 {% endif %}
 
 {% if page.experiences.size > 0 %}
@@ -22,4 +34,5 @@ layout: page
     {% include experience_panel.html name=exp_name %}
   </div>
 {% endfor %}
+</div>
 {% endif %}
