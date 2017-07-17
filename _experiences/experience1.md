@@ -1,6 +1,5 @@
 ---
 title: A First Experience
-sort-order: 1
 summary: "Short sentence or two that describes the purpose of this experience."
 ---
 

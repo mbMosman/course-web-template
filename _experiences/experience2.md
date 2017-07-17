@@ -1,6 +1,5 @@
 ---
 title: Second Experience
-sort-order: 2
 summary: "Another short sentence or two that describes the purpose of this other experience."
 ---
 

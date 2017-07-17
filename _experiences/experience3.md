@@ -1,6 +1,5 @@
 ---
 title: Third Experience
-sort-order: 3
 summary: "Yet another short sentence or two that describes the purpose of the experience."
 ---
 
