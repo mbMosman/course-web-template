@@ -180,3 +180,53 @@ a.block-link {
 .tag {
   margin: 0 .1em;
 }
+
+aside {
+    top: 60px;
+    left: 0px;
+    height: 100%;
+    position: fixed;
+    box-shadow: inset -5px 0 5px 0px #000;
+    width: 200px;
+    padding-top: 20px;
+    background-color: $theme-color-dark;
+    color: #ffffff;
+}
+
+.has-toc {
+  margin-left: 220px;
+}
+
+.toc-anchor:target {
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+#toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#toc li {
+    padding: 5px 10px;
+}
+
+#toc a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+#toc .toc-h2 {
+    padding-left: 10px;
+}
+
+#toc .toc-h3 {
+    padding-left: 20px;
+}
+
+#toc .toc-active {
+    background: #336699;
+    box-shadow: inset -5px 0px 10px -5px #000;
+}
