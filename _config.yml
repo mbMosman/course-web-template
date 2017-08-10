@@ -89,4 +89,4 @@ defaults:
       path: ""
       type: "assessments"
     values:
-      layout: module_content
+      layout: assessment

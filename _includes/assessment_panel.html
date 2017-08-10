@@ -1,0 +1,39 @@
+{% assign assessment = include.assessment %}
+
+{% if assessment == nil %}
+{% for item in site.assessments %}
+  {% assign item_name = item.path | split:"/" | last | split:"." | first %}
+  {% if include.name == item_name %}
+    {% assign assessment = item %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% endif %}
+
+{% if assessment %}
+<a class="block-link" href="{{ assessment.url | prepend: site.baseurl }}">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        {% if assessment.presentation == "pie_chart" %}
+        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+        {% elsif assessment.presentation == "bar_chart" %}
+        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+        {% else %}
+        <i class="fa fa-area-chart" aria-hidden="true"></i>
+        {% endif %}
+        &nbsp;{{ assessment.title }}</h2>
+    </div>
+    <div class="panel-body">
+    {{ assessment.summary }}
+    </div>
+  </div>
+</a>
+{% else %}
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h2 class="panel-title">Error</h2>
+  </div>
+  <div class="panel-body">assessment {% if include.name %}with the file name: {{ include.name }},{% endif %}  was not found.</div>
+</div>
+{% endif %}
