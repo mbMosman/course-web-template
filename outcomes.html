@@ -11,7 +11,7 @@ layout: page
 <div class="panel panel-default">
 
   <div class="panel-heading">
-    <h2 class="panel-title"><i class="fa fa-check" aria-hidden="true"></i> {{ course_outcome.text }}</h2>
+    <h2 class="panel-title"><i class="fa fa-star" aria-hidden="true"></i> {{ course_outcome.text }}</h2>
   </div>
   <ul class="list-group">
 
@@ -21,7 +21,7 @@ layout: page
       {% assign match_found = true %}
       <li class="list-group-item">
         <a class="block-link" href="{{ outcome.url | prepend: site.baseurl }}">
-            <h3 class="panel-title">{{ outcome.title }}</h3>
+            <h3 class="panel-title"><i class="fa fa-check-square-o" aria-hidden="true"></i> {{ outcome.title }}</h3>
             {{ outcome.content | markdownify }}
         </a>
       </li>
