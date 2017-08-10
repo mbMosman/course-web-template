@@ -28,6 +28,8 @@ googleCollegeCalendarId: 'Update Me'
 googleCourseCalendarId: 'Update Me'
 ###############################################################################
 
+# Google Analytics Tracking
+google_analytics_tracking_id: 'Update Me'
 
 # The information below should not need to be modified.
 ###############################################################################
