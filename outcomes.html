@@ -2,9 +2,7 @@
 layout: default
 ---
 
-<header><h1>Learning Outcomes</h1></header>
-
-<main class="container">
+<h1>Learning Outcomes</h1>
 
 {% assign outcomes = site.outcomes %}
 {% assign course_outcomes = site.data.course_outcomes | sort: 'sort-order' %}
@@ -41,5 +39,3 @@ layout: default
   <p>No course outcomes configured for this course.</p>
 
 {% endfor %}
-
-</main>

@@ -3,7 +3,6 @@
   const tocTarget = $('#toc');
   if (tocTarget.length > 0) {
     buildTOC(tocTarget)
-    $('main').addClass('has-toc')
   }
 
   function buildTOC($target){

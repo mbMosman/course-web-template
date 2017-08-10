@@ -2,10 +2,9 @@
 layout: default
 ---
 
-<header><h1>Learning Experiences</h1></header>
+<h1>Learning Experiences</h1>
 
-<main class="container">
-
+<div>
 {% assign experiences = site.experiences %}
 {% for ex in experiences %}
   {% include experience_panel.html experience=ex %}
@@ -15,5 +14,4 @@ layout: default
   <p>No experiences for this course.</p>
 
 {% endfor %}
-
-</main>
+</div>
