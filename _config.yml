@@ -20,13 +20,12 @@ url: "https://mbmosman.github.io" # the base hostname & protocol for your site, 
 #    - green           - turquoise       - blue
 #    - purple          - orange          - red
 theme_color: silver
-
 ###############################################################################
 
-###############################################################################
+
+
 # The information below should not need to be modified.
 ###############################################################################
-
 # Build settings
 ####################
 markdown: kramdown
@@ -70,12 +69,14 @@ defaults:
       type: "readings"
     values:
       layout: reading
+      add_toc: true
   -
     scope:
       path: ""
       type: "experiences"
     values:
       layout: experience
+      add_toc: true
   -
     scope:
       path: ""

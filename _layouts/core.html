@@ -20,7 +20,7 @@
 
   <!-- Nav Bar -->
   <nav class="navbar navbar-inverse navbar-fixed-top"  role="navigation">
-      <div class="container">
+      <div class="container-fluid">
           <div class="navbar-header">
               <div class="navbar-toggle-wrapper visible-xs">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".js-navbar-collapse">
@@ -52,26 +52,24 @@
   <!-- Content Area -->
   {{ content }}
 
-
+  <!-- Footer Area -->  
   <footer class="container-fluid">
-    <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-sm-10 col-lg-7">
-        Copyright &copy;{{ site.time | date:"%Y" }} by Mary Mosman
-        <br>This work is licensed under a
+    <div class="text-center">
+      <p>Copyright &copy;{{ site.time | date:"%Y" }} by Mary Mosman</p>
+      <p>
+        This work is licensed under the
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
           Creative&nbsp;Commons Attribution-Noncommercial-ShareAlike&nbsp;4.0 Unported&nbsp;License
         </a>
-      </div>
-      <div class="col-sm-2 col-lg-1">
         <a rel="license" href="//creativecommons.org/licenses/by-nc-sa/4.0/">
-          <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+          <img alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png">
         </a>
-      </div>
-      <div class="col-lg-2"></div>
+      </p>
+      <p>Last content update on: <span>{{ site.time }}</span></p>
     </div>
   </footer>
 
+  <!-- Scripts Area -->
   <script src="{{ "/assets/js/lib/jquery-3.2.1.min.js" | prepend:site.baseurl }}"></script>
   <script src="{{ "/assets/js/lib/bootstrap.min.js" | prepend:site.baseurl }}"></script>
 
