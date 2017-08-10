@@ -22,7 +22,14 @@ url: "https://mbmosman.github.io" # the base hostname & protocol for your site, 
 theme_color: silver
 ###############################################################################
 
+# Google Calendar Settings
+googleCalendarApiKey: 'Update Me'
+googleCollegeCalendarId: 'Update Me'
+googleCourseCalendarId: 'Update Me'
+###############################################################################
 
+# Google Analytics Tracking
+google_analytics_tracking_id: 'Update Me'
 
 # The information below should not need to be modified.
 ###############################################################################

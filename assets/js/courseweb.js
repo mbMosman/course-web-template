@@ -1,5 +1,9 @@
 (function($) {
 
+  // If on a page associated with a navbar item, make its navbar item 'active'.
+  $('.navbar-nav').find('a[href="' + location.pathname + '"]').parents('li').addClass('active');
+
+  // Build TOC if on a TOC page
   const tocTarget = $('#toc');
   if (tocTarget.length > 0) {
     buildTOC(tocTarget)

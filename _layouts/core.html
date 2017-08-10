@@ -15,6 +15,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="{{ site.baseurl }}/assets/css/courseweb.css" rel="stylesheet"/>
   <link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet"/>
+  <script src="{{ "/assets/js/lib/jquery-3.2.1.min.js" | prepend:site.baseurl }}"></script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -42,6 +43,7 @@
                 <li><a href="{{ "/readings.html" | prepend:site.baseurl }}">Readings</a></li>
                 <li><a href="{{ "/experiences.html" | prepend:site.baseurl }}">Experiences</a></li>
                 <li><a href="{{ "/assessments.html" | prepend:site.baseurl }}">Assessments</a></li>
+                <li><a href="{{ "/schedule.html" | prepend:site.baseurl }}">Schedule</a></li>
                 <!-- End Nav items -->
               </ul>
           </div>
@@ -52,7 +54,7 @@
   <!-- Content Area -->
   {{ content }}
 
-  <!-- Footer Area -->  
+  <!-- Footer Area -->
   <footer class="container-fluid">
     <div class="text-center">
       <p>Copyright &copy;{{ site.time | date:"%Y" }} by Mary Mosman</p>
@@ -70,7 +72,23 @@
   </footer>
 
   <!-- Scripts Area -->
-  <script src="{{ "/assets/js/lib/jquery-3.2.1.min.js" | prepend:site.baseurl }}"></script>
+  {% if site.google_analytics_tracking_id %}
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', '{{ site.google_analytics_tracking_id }}', 'auto');
+    ga('send', 'pageview');
+  </script>
+  {% endif %}
   <script src="{{ "/assets/js/lib/bootstrap.min.js" | prepend:site.baseurl }}"></script>
 
   <script src="{{ "/assets/js/courseweb.js" | prepend:site.baseurl }}"></script>

@@ -1,0 +1,37 @@
+---
+layout: page
+---
+
+<!-- Load FullCalendar for schedule page. -->
+<!-- Documentation available at: http://fullcalendar.io/ -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/gcal.js"></script>
+
+<div class="schedule">
+  <h1>Schedule</h1>
+
+  <div id='calendar'></div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+        googleCalendarApiKey: '{{ site.googleCalendarApiKey }}',
+        eventColor: '#446e9b',
+        eventSources: [
+            {
+                // College Events Calendar
+                googleCalendarId: '{{ site.googleCollegeCalendarId }}',
+                color: '#f26522',  // HTC Orange for college dates & events
+                textColor: 'black'
+            },
+            {
+                // Course Specific Calendar
+                googleCalendarId: '{{ site.googleCourseCalendarId }}'
+            }
+        ]
+    });
+});
+</script>
