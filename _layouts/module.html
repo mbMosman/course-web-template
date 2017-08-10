@@ -2,10 +2,10 @@
 layout: page
 ---
 
-<h2>{{ page.title }}</h2>
+<h1>{{ page.title }}</h1>
 
 {% if page.outcomes.size > 0 %}
-<h3>Outcomes</h3>
+<h2>Outcomes</h2>
 <div class="row">
 {% for outcome_name in page.outcomes %}
   <div class="col-xs-12 col-md-6">
@@ -18,7 +18,7 @@ layout: page
 {% endif %}
 
 {% if page.readings.size > 0 %}
-<h3>Readings</h3>
+<h2>Readings</h2>
 <div class="row">
 {% for reading_name in page.readings %}
   <div class="col-sm-4 col-lg-3">
@@ -33,7 +33,7 @@ layout: page
 {% endif %}
 
 {% if page.experiences.size > 0 %}
-<h3>Experiences</h3>
+<h2>Experiences</h2>
 <div class="row">
 {% for exp_name in page.experiences %}
   <div class="col-sm-4 col-lg-3">
