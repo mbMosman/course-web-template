@@ -7,8 +7,9 @@
 
   function buildTOC($target){
 
+    $target.empty().append('<p class="h1">Contents</p>');
     const $listH1s = $('<ul class="toc-l1"></ul>');
-    $target.empty().append($listH1s);
+    $target.append($listH1s);
 
     let $lastH1Item = null;
     let $lastH2Item = null;
