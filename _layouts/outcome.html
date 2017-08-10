@@ -1,17 +1,37 @@
 ---
 layout: page
 ---
-
+{% assign outcome_name = page.path | split:"/" | last | split:"." | first %}
+<div class="outcome">
 <h1>{{ page.title }}</h1>
 {{ content }}
 
 {% for course_outcome in site.data.course_outcomes %}
   {% if  page.course_outcome == course_outcome.id %}
-  <div class="panel panel-default">
-    <div class="panel-heading">This outcome supports the following course outcome:</div>
-    <div class="panel-body">
-      <p>{{ course_outcome.text }}</p>
-    </div>
-  </div>
+  <h2>Course Outcome</h2>
+  <p>
+    This outcome supports the following course outcome:
+    <ul><li>{{ course_outcome.text }}</li></ul>
+  </p>
   {% endif %}
 {% endfor %}
+
+<h2>Modules</h2>
+<p>This outcome is addressed in the following course modules:</p>
+<ul>
+{% assign module_found = false %}
+
+{% for module in site.modules %}
+  {% for mod_outcome in module.outcomes %}
+    {% if  outcome_name == mod_outcome %}
+      {% assign module_found = true %}
+      <li><a href="{{ module.url | prepend: site.baseurl }}">{{ module.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if module_found == false %}
+  <li>No modules found with this outcome.</li>
+{% endif %}
+</ul>
+</div>
