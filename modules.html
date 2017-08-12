@@ -5,11 +5,11 @@ layout: full-page
 <h1>Modules <small>Topics covered in this class.</small></h1>
 
 {% assign modules = site.modules | sort: 'sort-order' %}
-
+<div class="row">
 {% for module in modules %}
 <div class="col-sm-4">
   <a class="block-link" href="{{ module.url | prepend: site.baseurl }}">
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
 
       <div class="panel-heading">
         <h2 class="panel-title"><i class="fa fa-cube" aria-hidden="true"></i> {{ module.title }}</h2>
@@ -30,3 +30,4 @@ layout: full-page
   <p>No modules configured for this course.</p>
 
 {% endfor %}
+</div>

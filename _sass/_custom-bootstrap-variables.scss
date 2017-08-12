@@ -1,0 +1,45 @@
+// Bootstrap Navbar
+$brand-primary: $theme-color;
+$brand-info: $theme-color;
+
+//=== Inverted navbar
+$navbar-inverse-color: $theme-contrast-text-color;
+$navbar-inverse-bg: $theme-color;
+$navbar-inverse-border: $theme-border-color;
+
+// Inverted navbar links
+$navbar-inverse-link-color: $theme-contrast-text-color;
+$navbar-inverse-link-hover-color: darken($navbar-inverse-link-color, 10%);
+$navbar-inverse-link-active-color: $theme-contrast-text-color-dark;
+$navbar-inverse-link-active-bg: $theme-color-dark;
+
+// Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #ffffff;
+$component-active-bg:       $theme-color-dark;
+
+// Panels
+$panel-bg:                    darken(#FFFFFF, 2%);
+
+$panel-primary-heading-bg:    lighten($theme-color, 5%);
+$panel-primary-text:          text-color-for-background($panel-primary-heading-bg);
+$panel-primary-border:        darken($panel-primary-heading-bg, 10%);
+
+$panel-inner-border:          darken($panel-bg, 10%);
+$panel-footer-bg:             $panel-primary-heading-bg;
+
+// List group
+$list-group-bg:                 $panel-bg;
+$list-group-border:             $panel-inner-border;
+$list-group-hover-bg:           darken($panel-bg, 10%);
+
+$list-group-active-color:       $component-active-color;
+$list-group-active-bg:          $component-active-bg;
+$list-group-active-text-color:  lighten($list-group-active-bg, 40%);
+
+$list-group-link-color:         #555;
+$list-group-link-hover-color:   $list-group-link-color;
+$list-group-link-heading-color: #333;
+
+//Badges
+$badge-bg:                    $theme-color-dark;
+$badge-color:                 $theme-contrast-text-color-dark;

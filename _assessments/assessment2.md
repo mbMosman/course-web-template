@@ -4,7 +4,6 @@ summary: "Short sentence or two that describes this assessment."
 presentation: pie_chart
 ---
 
-# {{ page.title }}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus quis nisi vel bibendum. Pellentesque ac sapien nunc. Pellentesque turpis leo, maximus at felis fermentum, porta finibus quam. Donec tempus porta diam, vitae congue odio pellentesque et.
 
 

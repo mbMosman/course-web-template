@@ -19,7 +19,7 @@ url: "https://mbmosman.github.io" # the base hostname & protocol for your site, 
 #    - silver          - gold            - midnight
 #    - green           - turquoise       - blue
 #    - purple          - orange          - red
-theme_color: silver
+theme_color: blue
 ###############################################################################
 
 # Google Calendar Settings
