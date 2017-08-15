@@ -12,14 +12,19 @@
   </div>
   <div class="col-xs-12 col-sm-8 col-md-10 col-lg-5">
     <p><b>Contact Information</b></p>
-    <p><a href="mailto:{{ instructor.email }}">{{ instructor.email }}</a>
+    {% if instructor.email %}
+    <p>Email: <a href="mailto:{{ instructor.email }}">{{ instructor.email }}</a>
        {% if instructor.email_note %}<br>{{ instructor.email_note }}{% endif %}
-       {% if instructor.phone %}<br>{{ instructor.phone }}{% endif %}
+    </p>{% endif %}
+    {% if instructor.phone %}
+    <p>Phone: {{ instructor.phone }}
        {% if instructor.phone_note %}<br>{{ instructor.phone_note }}{% endif %}
-       {% if instructor.office_location %}<br>{{ instructor.office_location }}{% endif %}
-    </p>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-10 col-lg-5 col-md-offset-2 col-lg-offset-0">
+    </p>{% endif %}
+    {% if instructor.office_location %}
+    <p>Office Location: {{ instructor.office_location }}
+    </p>{% endif %}
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-10 col-lg-5 col-md-offset-2 col-lg-offset-0">
     {% if instructor.office_hours %}
     <p><b>Office Hours</b></p>
     <ul>{% for time in instructor.office_hours %}
@@ -27,10 +32,10 @@
     {% endfor %}</ul>
     {% if instructor.office_hours_note %}<p>{{ instructor.office_hours_note }}</p>{% endif %}
     {% endif %}
-    </div>
-    <div class="col-xs-12 col-lg-6">
+  </div>
+  <div class="col-xs-12 col-lg-6">
     {% if instructor.description %}<p>{{ instructor.instructor.description | markdownify }}</p>{% endif %}
-    </div>
+  </div>
   </div>
 </div>
 {% else %}

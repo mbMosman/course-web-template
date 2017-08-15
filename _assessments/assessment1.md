@@ -4,7 +4,7 @@ summary: "Short sentence or two that describes this assessment."
 presentation: bar_chart
 ---
 
-# {{ page.title }}
+
 Etiam volutpat sapien sed purus facilisis vestibulum. Nunc sollicitudin mauris vel nulla vehicula, vitae mollis dui malesuada. Aenean eget massa id nibh vestibulum tincidunt in vel diam. Donec ex ex, hendrerit nec fermentum fermentum, laoreet non nulla. Donec id tincidunt purus.
 
 <script>

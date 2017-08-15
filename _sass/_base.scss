@@ -1,0 +1,23 @@
+@function text-color-for-background($color) {
+  @if (lightness($color) > 60) {
+    @return #222222; // Lighter backgorund, return dark color
+  } @else {
+    @return #FEFEFE; // Darker background, return light color
+  }
+}
+
+$theme-color: $blue !default;
+$theme-color-dark: $blue-dark !default;
+
+$theme-text-color: #000000;
+$theme-contrast-text-color: text-color-for-background($theme-color);
+$theme-contrast-text-color-dark: text-color-for-background($theme-color-dark);
+
+$theme-link-color: $theme-color;
+$theme-link-hover-color: darken($theme-link-color, 15%);
+
+$theme-border-color: darken($theme-color, 20%);
+$theme-border-shadow-color: darken($theme-color, 10%);
+
+$theme-footer-bg-color: $theme-color-dark;
+$theme-footer-text-color: text-color-for-background($theme-footer-bg-color);
