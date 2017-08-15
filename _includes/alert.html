@@ -1,0 +1,27 @@
+{% case include.type %}
+  {% when 'danger' %}
+    {% assign alert-type = 'danger' %}
+    {% assign emoji = 'exclamation' %}
+  {% when 'warning' %}
+    {% assign alert-type = 'warning' %}
+    {% assign emoji = 'warning' %}
+  {% when 'note' %}
+    {% assign alert-type = 'info' %}
+    {% assign emoji = 'notebook' %}
+  {% when 'info' %}
+    {% assign alert-type = 'info' %}
+    {% assign emoji = 'notebook' %}
+  {% when 'tip' %}
+    {% assign alert-type = 'info' %}
+    {% assign emoji = 'dizzy' %}
+  {% endcase %}
+<div class="alert alert-{{ alert-type }}" role="alert">
+  <div class="media">
+    <div class="media-left media-top">
+      :{{ emoji }}:
+    </div>
+    <div class="media-body">
+      {{ include.content | markdownify }}
+    </div>
+  </div>
+</div>
