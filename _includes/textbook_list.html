@@ -8,7 +8,7 @@
     </div>
     <div class="panel-body">
       {% for author in textbook.authors %}
-        {% if forloop.first %}by: {% endif %}
+        {% if forloop.first %}Author: {% endif %}
         {{ author }}{% unless forloop.last %}, {% endunless %}
       {% endfor %}
       {%if textbook.isbn %}<br>ISBN: {{ textbook.isbn }}{% endif %}
