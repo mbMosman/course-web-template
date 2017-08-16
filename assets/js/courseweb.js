@@ -40,9 +40,10 @@
         if ( $workingH2List == null ) {
           $workingH2List = $('<ul class="toc-l2"></ul>');
           $lastH1Item.append($workingH2List);
-          // Reset the sub heading h3 list
-          $workingH3List = null;
         }
+
+        // Reset the sub heading h3 list
+        $workingH3List = null;
 
         $lastH2Item = $('<li></li>');
         $lastH2Item.append(linkHtml);
