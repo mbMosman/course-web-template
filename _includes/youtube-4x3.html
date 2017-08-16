@@ -1,0 +1,8 @@
+<div class="row" style="padding:10px 0">
+  <div class="col-xs-12 col-md-8">
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/{{ include.id }}" allowfullscreen></iframe>
+    </div>
+    {% if iclude.caption %} {{ include.caption | markdownify }} {% endif %}
+  </div>
+</div>
