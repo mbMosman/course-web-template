@@ -1,8 +1,8 @@
 ---
 ---
 
-$font-family-base:     Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-$headings-font-family: "Lucida Bright", Georgia, serif;
+$font-family-base:     "Open Sans", Arial, sans-serif;
+$headings-font-family: Tienne, Didot, Garamond, "Times New Roman", serif;
 
 @import "colors";
 
@@ -35,6 +35,14 @@ blockquote {
 
 header {
   margin-top: $line-height-computed * 2;
+}
+
+h2 {
+  margin-top: $line-height-computed * 2;
+}
+
+h3 {
+  margin-top: $line-height-computed * 1.5;
 }
 
 main h1 {
@@ -102,8 +110,8 @@ main a.block-link {
 }
 
 .toc-anchor:target {
-  padding-top: 70px;
-  margin-top: -70px;
+  padding-top: 60px;
+  margin-top: -60px;
 }
 
 #toc ul {
